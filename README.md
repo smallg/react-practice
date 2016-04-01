@@ -1,1 +1,2 @@
-# react-practice
+React with ECMAScript6 practice
+

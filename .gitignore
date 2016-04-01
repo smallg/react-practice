@@ -1,0 +1,4 @@
+.idea
+/**/bundle*.js*
+/**/web*compiled.js*
+node_modules
