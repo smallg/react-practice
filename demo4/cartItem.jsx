@@ -1,17 +1,6 @@
 import React from 'react';
 
 export default class CartItem extends React.Component {
-    //ES7
-    //static propTypes = {
-    //    title: React.PropTypes.string.isRequired,
-    //    price: React.PropTypes.number.isRequired,
-    //    initialQty: React.PropTypes.number
-    //};
-    //static defaultProps = {
-    //    title: 'Undefined Product',
-    //    price: 100,
-    //    initialQty: 0
-    //};
 
     constructor(props) {
         super(props);
