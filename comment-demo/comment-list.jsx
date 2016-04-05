@@ -4,9 +4,15 @@ import Comment from './comment.jsx';
 export default class CommentList extends React.Component {
 
     render() {
+        var commentNodes = this.props.data.map(function (comment) {
+            return (
+                <Comment author={comment.author} key={comment.id}>
+                    {comment.text}
+                </Comment>
+            )
+        });
         return <div className="commentList">
-            <Comment author="Pete Hunt">This is one comment.</Comment>
-            <Comment author="Jordan Walke">This is *anthor* comment.</Comment>
+            {commentNodes}
         </div>
     }
 }
