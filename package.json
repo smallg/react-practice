@@ -18,7 +18,8 @@
   "homepage": "https://github.com/smallg/react-practice#readme",
   "dependencies": {
     "react": "^0.14.8",
-    "react-dom": "^0.14.8"
+    "react-dom": "^0.14.8",
+    "react-marked-markdown": "^1.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
