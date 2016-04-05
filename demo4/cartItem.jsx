@@ -48,14 +48,14 @@ export default class CartItem extends React.Component {
                     <h2>{this.state.title}</h2>
                 </figcaption>
             </figure>
-            <p className="large-4 column"><strong>Quantity: {this.state.qty}</strong></p>
+            <p className="large-4 column text-center"><strong>Quantity: {this.state.qty}</strong></p>
 
-            <p className="large-4 column">
+            <p className="large-4 column text-center">
                 <button onClick={this.increaseQty.bind(this)} className="button success">+</button>
                 <button onClick={this.decreaseQty.bind(this)} className="button alert">-</button>
             </p>
 
-            <p className="large-4 column"><strong>Price per item:</strong> ${this.props.price}</p>
+            <p className="large-4 column text-center"><strong>Price per item:</strong> ${this.props.price}</p>
 
             <h3 className="large-12 column text-center">
                 Total: ${this.state.total}
