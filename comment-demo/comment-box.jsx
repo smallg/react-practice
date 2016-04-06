@@ -20,11 +20,30 @@ export default class CommentBox extends React.Component {
         })
     }
 
+    handleCommentSubmit(comment) {
+        var comments = this.state.data;
+        comment.id = Date.now();
+        var newComments = comments.concat([comment]);
+        this.setState({data: newComments});
+        $.ajax({
+            url: this.props.url,
+            dataType: 'json',
+            type: 'POST',
+            data: comment,
+            success: function (data) {
+                this.setState({data: newComments});
+            }.bind(this),
+            error: function (xhr, status, err) {
+                this.setState({data: comments});
+            }.bind(this)
+        });
+    }
+
     render() {
         return <div className="commentBox">
             <h1>Comments</h1>
             <CommentList data={this.state.data}/>
-            <CommentForm />
+            <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)}/>
         </div>
     }
 }

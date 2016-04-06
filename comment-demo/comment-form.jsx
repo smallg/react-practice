@@ -24,6 +24,7 @@ export default class CommentForm extends React.Component {
         if (!text || !author) {
             return;
         }
+        this.props.onCommentSubmit({author: author, text: text});
         this.setState({author: '', text: ''});
     }
 
