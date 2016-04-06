@@ -14,14 +14,13 @@ export default class CommentForm extends React.Component {
     }
 
     handleTextChange(e) {
-        this.setState({text: e.target.text});
+        this.setState({text: e.target.value});
     }
 
     handleSubmit(e) {
         e.preventDefault();
         var author = this.state.author.trim();
         var text = this.state.text.trim();
-        console.log(author, text)
         if (!text || !author) {
             return;
         }
