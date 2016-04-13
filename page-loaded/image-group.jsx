@@ -16,19 +16,17 @@ export default class ImageGroup extends React.Component {
             cache: false,
             success: function (data) {
                 this.setState({data: data});
-
             }.bind(this)
         });
-        window.onload = function(){
+        $(window).on('load', function () {
             NProgress.done();
-        }
+        });
     }
 
     render() {
-
-        var images = this.state.data.map(function (v) {
+        var images = this.state.data.map(function (v, k) {
             return (
-                <img src={v.url}/>
+                <img src={v.url} title={v.name} key={k}/>
             )
         });
         return (
